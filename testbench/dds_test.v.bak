@@ -1,0 +1,43 @@
+`timescale 1ns/1ns
+
+module dds_test();
+
+reg 			clk;
+reg 			rst_n;
+reg 	[27:0]fword;
+reg 	[11:0]pword;
+
+wire 	[11:0]dds_out;
+
+ DDS DDS_inst(       
+
+	.clk(clk),
+	.rst_n(rst_n),
+	.fword(fword),
+	.pword(pword),
+	.dds_out(dds_out)
+);
+
+//*****产生50MHZ时钟信号******
+initial 		clk = 1'b0;
+always 		#10 clk = ~ clk;
+
+
+//*****输入频率控制字与相位控制字***
+initial 	begin 
+
+rst_n = 1'b0;  
+
+#210 rst_n = 1'b1;
+
+fword1 = 32'd85899; pword1 = 32'd0; //初相位为0 频率为1KHZ
+
+#50_000_000;
+
+$stop;
+
+end
+
+
+
+endmodule 

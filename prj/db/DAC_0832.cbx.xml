@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DAC_0832">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DAC_0832|sindds:sindds_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_um31.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

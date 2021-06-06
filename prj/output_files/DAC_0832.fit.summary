@@ -1,0 +1,12 @@
+Fitter Status : Successful - Sun Jun 06 17:31:25 2021
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DAC_0832
+Top-level Entity Name : DAC_0832
+Family : Cyclone
+Device : EP1C3T144C8
+Timing Models : Final
+Total logic elements : 180 / 2,910 ( 6 % )
+Total pins : 88 / 104 ( 85 % )
+Total virtual pins : 0
+Total memory bits : 49,152 / 59,904 ( 82 % )
+Total PLLs : 0 / 1 ( 0 % )

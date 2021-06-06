@@ -1,0 +1,44 @@
+module pwm_gen(
+
+input nreset,
+input clk,
+input en,
+
+input [15:0] period,
+input [15:0] h_time,
+
+output reg pwm
+
+);
+
+reg [31:0] CNT;
+
+always @ (posedge clk)
+begin
+	if(!nreset)
+		CNT <= 0;
+	else if(CNT >= period - 1 )
+		CNT <= 0;
+	else
+		CNT <= CNT + 1;
+end
+
+always @ (posedge clk)
+begin
+	if(!nreset)
+		pwm <= 0;
+    else    //nreset = 1
+    begin
+        if(en == 0)
+            pwm <= 0;
+        else    //en = 1
+        begin
+            if(CNT <= h_time - 1)
+                pwm <= 1;
+            else
+                pwm <= 0;
+        end
+    end
+end
+
+endmodule 
