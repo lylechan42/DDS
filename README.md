@@ -1,5 +1,5 @@
 # DDS_unfinished
-综合课程设计
+综合课程设计——直接数字频率合成
 
 ## 编译环境
 推荐 Quartus 13.0和Modelsim SE 64-10.5
